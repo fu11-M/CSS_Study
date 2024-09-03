@@ -1,0 +1,146 @@
+CSS3로 작성된 코드를 Style Sheet라고 하며 CSS를 사용해 위치를 지정하여 해당 위치의 색상, 텍스트 이동, 블록에 대한 여백 및 테두리를 설정할 수 있다.
+
+CSS3에서 특정 HTML 태그를 선택할 때는 선택자를 사용하면 특정 HTML 태그에 원하는 스타일 시트나 스크립트를 적용할 수 있다.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        h1{
+            color: white;
+            background-color: purple;
+        }
+    </style>
+<body>
+    <h1>CSS3 Selector</h1>
+</body>
+</html>
+```
+
+
+## CSS3 선택자 종류
+
+### 전체 선택자 * : HTML 페이지 내부의 태그를 모두 CSS3 설정으로 선택
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+</head>
+<style>
+    *{
+        color: blueviolet;
+    }
+</style>
+<body>
+    <ul>
+        <li>
+            <h1>What is Lorem Ipsum?</h1>
+        </li>
+        <ol>
+            <li>
+                <b>Lorem Ipsum has been the industry'</b>s standard dummy text ever since the 1500s,
+                <u>when an unknown printer took</u> <i>a galley of type and scrambled it to make a </i><ins>type specimen book.</ins>
+                <br>
+                <del>abcdefg</del>
+                <hr>
+            </li>
+        </ol>
+    </ul>
+</body>
+</html>
+```
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ea204791-94b0-4594-95e9-37705edf8245/5dd53c1f-febe-407e-aa0a-ddf07a599839/Untitled.png)
+
+### 태그 선택자 : HTML 페이지 내부의 특정 태그의 내용을 선택
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+</head>
+<style>
+    h1{
+        color: blueviolet;    
+    }
+
+    p{
+        color: red;
+    }
+</style>
+<body>
+    <ul>
+        <li>
+            <h1>What is Lorem Ipsum?</h1>
+        </li>
+        <ol>
+            <li>
+                <b>Lorem Ipsum has been the industry'</b>s standard dummy text ever since the 1500s,
+                <u>when an unknown printer took</u> <i>a galley of type and scrambled it to make a </i><ins>type specimen book.</ins>
+                <br>
+                <del>abcdefg</del>
+                <hr>
+            </li>
+        </ol>
+    </ul>
+</body>
+</html>
+```
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ea204791-94b0-4594-95e9-37705edf8245/412b1e3e-8f9d-4313-ab03-b7c7b53b4264/Untitled.png)
+
+선택자를 여러 개 사용하여 스타일을 적용할 때는 쉼표를 사용하여야 한다. 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+</head>
+<style>
+    h1, p {
+        color: blueviolet;    
+    }
+
+    /* p {
+        color: red;
+    } */
+</style>
+<body>
+    <ul>
+        <li>
+            <h1>What is Lorem Ipsum?</h1>
+        </li>
+        <ol>
+            <li>
+                <b>Lorem Ipsum has been the industry'</b>s standard dummy text ever since the 1500s,
+                <u>when an unknown printer took</u> <i>a galley of type and scrambled it to make a </i><ins>type specimen book.</ins>
+                <br>
+                <del>abcdefg</del>
+                <hr>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </li>
+        </ol>
+    </ul>
+</body>
+</html>
+```
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ea204791-94b0-4594-95e9-37705edf8245/34b4be3a-7ad2-4ad3-9e37-f23935942b18/Untitled.png)
